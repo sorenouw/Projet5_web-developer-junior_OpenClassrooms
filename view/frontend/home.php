@@ -1,4 +1,4 @@
-<?php $title = 'Jean Forteroche'; ?>
+<?php $title = 'Miam Délice : Recettes de cusine.'; ?>
 <?php ob_start(); ?>
 <?php include("view/frontend/nav.php"); ?>
 <?php include("view/frontend/headerImg.php"); ?>
@@ -15,7 +15,7 @@
     </div>
 
   <?php endforeach; ?>
-  
+
 </section>
 
 <?php $content = ob_get_clean(); ?>

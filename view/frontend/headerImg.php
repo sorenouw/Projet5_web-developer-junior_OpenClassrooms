@@ -1,4 +1,4 @@
 <div class="headerImg">
-  <img src="public/img/index.jpg" alt="" class="img-fluid">
-  <h2 class="imgTitle">"Billet simple pour l'Alaska"</h2>
+  <img src="public/img/index.png" alt="" class="img-fluid">
+  <h2 class="imgTitle">"Title"</h2>
 </div>
