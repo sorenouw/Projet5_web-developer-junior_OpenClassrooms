@@ -3,6 +3,7 @@
 <?php include("view/frontend/nav.php"); ?>
 <?php include("view/frontend/headerImg.php"); ?>
 
+<img src="public/img/logo.png" alt="" class="headerLogo">
 <section class="index_posts">
 
   <?php foreach ($articles as $article): $content = substr($article->content(), 0, 500); ?>

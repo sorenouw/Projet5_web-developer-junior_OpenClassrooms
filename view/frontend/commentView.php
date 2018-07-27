@@ -3,6 +3,9 @@
   <?php ob_start(); ?>
   <?php include("view/frontend/nav.php"); ?>
   <?php include("view/frontend/headerImg.php"); ?>
+
+  
+<img src="public/img/logo.png" alt="" class="headerLogo">
 <p><a class="right" href="index.php">Accueil</a></p>
 <?php
 

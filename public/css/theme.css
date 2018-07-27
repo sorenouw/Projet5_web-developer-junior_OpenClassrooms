@@ -1,6 +1,4 @@
 a, button {
-  color: white;
-  background-color: #0093B7;
   padding: 6px 10px;
   margin: 1px;
   border-radius: 3px;
@@ -9,28 +7,25 @@ a, button {
   border: 0px;
   font-family: 'Old Standard TT';
 }
-h1 a{
-  background-color: unset;
-  font-size: unset;
-  font-family: unset;
-  padding: unset;
+.white{
+  color: #ff445a;
+  background-color: white;
+}
+.red{
+  background-color: #ff445a;
+  color: white;
 }
 button{
   cursor: pointer;
 }
 h3 {
-  color: #0093B7;
+  color: red;
 }
 h5{
   color: red;
   font-size: 20px;
 }
-header {
-  background-color: #003340;
-  color: white;
-}
 
 body {
-  background-color: #2A2B2B;
-  color: white;
+  background-color: white;
 }
