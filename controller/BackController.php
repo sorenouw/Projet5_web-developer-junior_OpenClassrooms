@@ -115,6 +115,7 @@ class BackController
         if (isset($_POST['5']) && !empty($_POST)) {
             $title = $_POST['title'];
             $content = $_POST['content'];
+            $image = $_FILES['image']['tmp_name'];
             $validation = true;
             if (empty($title) && empty($content)) {
                 $validation = false;
@@ -126,8 +127,22 @@ class BackController
             'content'=> $content,
           ));
                 $articleManager->add($article);
-                header('Location: index.php');
+
             }
+            elseif ($image){
+
+             $folder = "/localhost/php/p5/public/img/";
+             move_uploaded_file($_FILES[" image "][" tmp_name "], "$folder".$_FILES[" image "][" name "]);
+
+             $imageManager = new ImageManager();
+             $imagePath = new Image(array(
+               'folder'=> $folder,
+              'image'=> $image,
+              'postId'=> $postId
+              ));
+             $imageManager->add($imagePath);
+           }
+           header('Location: index.php');
         }
         require('view/backend/newPost.php');
     }

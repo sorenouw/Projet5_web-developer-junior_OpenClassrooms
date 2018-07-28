@@ -1,13 +1,16 @@
 <?php $title = 'Nouveau Post'; ?>
 
-<?php ob_start(); ?>  
+<?php ob_start(); ?>
         <p><a class="red" href="index.php?action=admin">Retour à l'interface d'admninistration</a></p>
 
 
-<form action="index.php?action=newPost" method="post">
+<form action="index.php?action=newPost" method="post" enctype="multipart/form-data">
   <div>
       <label for="title">Titre</label><br />
       <input type="text" id="title" name="title" />
+  </div>
+  <div>
+    <input type="file" name="image" />
   </div>
   <div>
       <label for="content">Contenu</label> <br />
