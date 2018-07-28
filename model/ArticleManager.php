@@ -8,6 +8,9 @@ class ArticleManager extends Manager {
       'title'=> $article->title(),
       'content'=> $article->content(),
     ));
+    $postId = $this->getDb()->lastInsertId();
+
+    return $postId;
    }
 
    public function getList(){

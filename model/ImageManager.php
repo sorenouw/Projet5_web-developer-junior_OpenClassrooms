@@ -1,14 +1,15 @@
 <?php
 
 
-class UserManager extends Manager
+class imageManager extends Manager
 {
     public function add($imagePath)
     {
-      $req = $this->getDb()->prepare("INSERT INTO image VALUES(:folder,:image,:postId)");
+      $req = $this->getDb()->prepare("INSERT INTO images VALUES(:folder,:image,:postId)");
       $req->execute(array(
-        'title'=> $article->title(),
-        'content'=> $article->content(),
+        'folder'=> $imagePath->folder(),
+        'image'=> $imagePath->image(),
+        'postId'=> $imagePath->postId(),
       ));
 
     }
