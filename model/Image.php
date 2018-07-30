@@ -4,6 +4,7 @@ class Image {
   private $_image;
   private $_postId;
 
+
   public function __construct(Array $data){
     $this->hydrate($data);
   }

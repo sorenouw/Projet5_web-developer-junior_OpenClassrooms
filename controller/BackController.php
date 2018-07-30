@@ -117,8 +117,6 @@ class BackController
         if (isset($_POST['5']) && !empty($_POST)) {
             $title = $_POST['title'];
             $content = $_POST['content'];
-            $image = $_FILES['image']['tmp_name'];
-
             $validation = true;
             if (empty($title) && empty($content)) {
                 $validation = false;
@@ -129,20 +127,31 @@ class BackController
             'title'=> $title,
             'content'=> $content,
           ));
-                $articleManager->add($article);
                 $postId = $articleManager->add($article);
-            }
-            if ($image) {
 
-                $folder = "/wamp/www/php/p5/public/img";
-                move_uploaded_file($_FILES[" image "][" tmp_name "], "$folder".$_FILES[" image "][" name "]);
+                // image
+                $folder = "/wamp/www/php/p5/public/uploads/";
+                $image = $_FILES["image"]["name"];
+                $folderPath = $folder . basename($_FILES["image"]["name"]);
+                $uploadOk = 1;
+                if (file_exists($folderPath)) {
+                    echo "Sorry, file already exists.";
+                    $uploadOk = 0;
+                }
+            }
+            if ($uploadOk == 0) {
+                echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+            } else {
+                move_uploaded_file($_FILES["image"]["tmp_name"], $folder . $_FILES["image"]["name"]);
 
                 $imageManager = new ImageManager();
                 $imagePath = new Image(array(
-               'folder'=> $folder,
+               'folder'=> $folderPath,
               'image'=> $image,
               'postId'=> $postId
               ));
+
                 $imageManager->add($imagePath);
             }
             header('Location: index.php');

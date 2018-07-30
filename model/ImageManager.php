@@ -1,11 +1,11 @@
 <?php
 
 
-class imageManager extends Manager
+class ImageManager extends Manager
 {
-    public function add($imagePath)
+    public function add(Image $imagePath)
     {
-      $req = $this->getDb()->prepare("INSERT INTO images VALUES(:folder,:image,:postId)");
+      $req = $this->getDb()->prepare("INSERT INTO images (folder, image, postId) VALUES (:folder,:image,:postId)");
       $req->execute(array(
         'folder'=> $imagePath->folder(),
         'image'=> $imagePath->image(),
