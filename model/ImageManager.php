@@ -13,4 +13,13 @@ class ImageManager extends Manager
       ));
 
     }
+    public function getImage($id){
+      $req = $this->getDb()->prepare("SELECT * FROM images WHERE postId = :postId");
+      $req->execute(array(
+        'postId'=> $id,
+      ));
+      $getImage =  $req->fetch();
+      return  $getImage;
+
+    }
 }

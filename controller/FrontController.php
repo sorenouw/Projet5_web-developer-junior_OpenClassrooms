@@ -3,6 +3,7 @@ class FrontController{
   public function home(){
     $articleManager = new ArticleManager();
     $articles = $articleManager->getList();
+
     require ('view/frontend/home.php');
   }
   public function commentView(){

@@ -9,6 +9,13 @@
   <?php foreach ($articles as $article): $content = substr($article->content(), 0, 500); ?>
 
     <div class="index_post">
+      <?php
+      $imageManager = new ImageManager();
+      $id = $article->id();
+      $images = $imageManager->getImage($id);
+
+      ?>
+        <img src="<?php echo $images["folder"] ;?>" class="postImage"/><br/>
         <h3><?php echo htmlspecialchars($article->title()); ?></h3>
         <em>Publié le <?php echo htmlspecialchars($article->date()); ?></em>
         <p><?php echo $content . ".."; ?></p>

@@ -130,7 +130,7 @@ class BackController
                 $postId = $articleManager->add($article);
 
                 // image
-                $folder = "/wamp/www/php/p5/public/uploads/";
+                $folder = "public/uploads/";
                 $image = $_FILES["image"]["name"];
                 $folderPath = $folder . basename($_FILES["image"]["name"]);
                 $uploadOk = 1;
