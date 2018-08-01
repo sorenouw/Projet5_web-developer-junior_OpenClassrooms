@@ -2,6 +2,7 @@
 class Article {
   private $_title;
   private $_content;
+  private $_folder;
   private $_date;
   private $_id;
 
@@ -15,6 +16,9 @@ class Article {
     }
     if(isset($data["content"])){
       $this->setContent($data[ "content"]);
+    }
+    if(isset($data["folder"])){
+      $this->setFolder($data[ "folder"]);
     }
     if(isset($data["date_publish"])){
       $this->setDate($data[ "date_publish"]);
@@ -31,6 +35,10 @@ class Article {
 
   public function content(){
     return $this->_content;
+  }
+
+  public function folder(){
+    return $this->_folder;
   }
 
   public function date(){
@@ -50,6 +58,11 @@ class Article {
   public function setContent($content){
     if(is_string($content)){
       $this->_content = $content;
+    }
+  }
+  public function setFolder($folder){
+    if(is_string($folder)){
+      $this->_folder = $folder;
     }
   }
   public function setDate($date){

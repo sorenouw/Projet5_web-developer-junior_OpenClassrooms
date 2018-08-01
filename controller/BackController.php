@@ -117,45 +117,27 @@ class BackController
         if (isset($_POST['5']) && !empty($_POST)) {
             $title = $_POST['title'];
             $content = $_POST['content'];
+            $folderPath = "public/uploads/" . basename($_FILES["image"]["name"]);
             $validation = true;
             if (empty($title) && empty($content)) {
                 $validation = false;
             }
+            if (file_exists($folderPath)) {
+                echo "Sorry, file already exists.";
+                $validation = false;
+            }
             if ($validation === true) {
+                move_uploaded_file($_FILES["image"]["tmp_name"], "public/uploads/" . $_FILES["image"]["name"]);
                 $articleManager = new ArticleManager();
                 $article = new Article(array(
             'title'=> $title,
             'content'=> $content,
+            'folder'=> $folderPath,
           ));
-                $postId = $articleManager->add($article);
-
-                // image
-                $folder = "public/uploads/";
-                $image = $_FILES["image"]["name"];
-                $folderPath = $folder . basename($_FILES["image"]["name"]);
-                $uploadOk = 1;
-                if (file_exists($folderPath)) {
-                    echo "Sorry, file already exists.";
-                    $uploadOk = 0;
-                }
-            }
-            if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
-            // if everything is ok, try to upload file
-            } else {
-                move_uploaded_file($_FILES["image"]["tmp_name"], $folder . $_FILES["image"]["name"]);
-
-                $imageManager = new ImageManager();
-                $imagePath = new Image(array(
-               'folder'=> $folderPath,
-              'image'=> $image,
-              'postId'=> $postId
-              ));
-
-                $imageManager->add($imagePath);
-            }
-            header('Location: index.php');
+          $articleManager->add($article);
         }
-        require('view/backend/newPost.php');
+            header('Location: index.php');
     }
+            require('view/backend/newPost.php');
+  }
 }

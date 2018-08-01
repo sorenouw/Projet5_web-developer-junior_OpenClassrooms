@@ -56,20 +56,41 @@ header {
   margin: 0 auto;
 }
 
-.index_post {
-  border: 2px solid #ff445a;
-  border-radius: 5px;
-  padding: 10px;
+figure img {
+  width: 100%;
+}
+figure a {
+  padding: 0;
+}
+figure {
+  position: relative;
   overflow: hidden;
   height: auto;
-  width: 350px;
-  margin: 10px;
-  text-align: justify;
-}
-.postImage{
-  height: 300px;
   width: 300px;
+  margin: 15px;
+  background-color: rgba(0, 0, 0, 0);
 }
+
+figcaption {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+  opacity: 0;
+  top: 30%;
+  left: 0;
+  font-size: 14px;
+  transition: all 0.6s ease;
+}
+figcaption p{
+  margin: 0;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  top: 0;
+}
+
 /*----- Post and Comment -----*/
 
 .right {

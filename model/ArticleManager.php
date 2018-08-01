@@ -3,19 +3,17 @@
 class ArticleManager extends Manager {
 
   public function add(Article $article){
-    $req = $this->getDb()->prepare("INSERT INTO post (title, content,date_publish) VALUES (:title, :content, now()) ");
+    $req = $this->getDb()->prepare("INSERT INTO post (title, content, folder, date_publish) VALUES (:title, :content, :folder, now()) ");
     $req->execute(array(
       'title'=> $article->title(),
       'content'=> $article->content(),
+      'folder'=> $article->folder(),
     ));
-    $postId = $this->getDb()->lastInsertId();
-
-    return $postId;
    }
 
    public function getList(){
      $articles = [];
-     $req = $this->getDb()->query("SELECT id, title, content, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 9");
+     $req = $this->getDb()->query("SELECT id, title, content, folder, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 9");
      while ($data = $req->fetch()){
        $articles[]=new Article($data);
      }
@@ -23,7 +21,7 @@ class ArticleManager extends Manager {
    }
 
    public function getPost($id){
-     $req = $this->getDb()->prepare("SELECT id, title, content, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post WHERE id = :id");
+     $req = $this->getDb()->prepare("SELECT id, title, content, folder, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post WHERE id = :id");
      $req->execute(array(
        'id'=> $id,
      ));

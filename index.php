@@ -1,5 +1,6 @@
 <?php
 session_start();
+require "vendor/autoload.php";
 // Models
 require "model/Database.php";
 require "model/Manager.php";
@@ -9,11 +10,11 @@ require "model/Comment.php";
 require "model/CommentManager.php";
 require "model/User.php";
 require "model/UserManager.php";
-require "model/Image.php";
-require "model/ImageManager.php";
 // Controllers
 require "controller/BackController.php";
 require "controller/FrontController.php";
+
+
 
   $frontController = new FrontController();
   $backController = new BackController();
