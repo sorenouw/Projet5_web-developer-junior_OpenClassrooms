@@ -4,7 +4,7 @@
   <?php include("view/frontend/nav.php"); ?>
   <?php include("view/frontend/headerImg.php"); ?>
 
-  
+
 <img src="public/img/logo.png" alt="" class="headerLogo">
 <p><a class="right" href="index.php">Accueil</a></p>
 <?php
@@ -22,13 +22,18 @@ echo $_SESSION["flash"]; ?>
 ?>
 
   <article class="post_view">
-    <h3><?php echo $post->title(); ?></h3>
-    <p>
-      <?php
-    echo $post->content();
-    ?>
-    </p>
-		<em>le <?php echo $post->date(); ?></em>
+    <div class="">
+          <img src="<?php echo $post->folder() ;?>"/></img>
+    </div>
+    <div class="">
+      <h3><?php echo $post->title(); ?></h3>
+        <p>
+          <?php
+        echo $post->content();
+        ?>
+        </p>
+        <em>le <?php echo $post->date(); ?></em>
+    </div>
   </article>
 
 

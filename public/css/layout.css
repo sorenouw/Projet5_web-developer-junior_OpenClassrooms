@@ -102,6 +102,7 @@ figure:hover figcaption {
   max-width: 80%;
   margin: auto;
   text-align: justify;
+  display: flex;
 }
 
 .comment {
