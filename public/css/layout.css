@@ -31,7 +31,7 @@ header {
   color: white;
 }
 
-.img-fluid {
+.sliderImg {
   max-width: 100%;
   height: auto;
   border-bottom: 2px solid #ff445a;
@@ -129,6 +129,10 @@ figure:hover figcaption {
 }
 textarea{
   max-width: 80%;
+}
+/*----- footer -----*/
+footer{
+  margin-top: 30px;
 }
 /*----- admin -----*/
 table {

@@ -8,7 +8,7 @@ a, button {
   font-family: 'Old Standard TT';
 }
 a:hover, button:hover{
-  opacity: 0.8;
+  color: pink;
 }
 .socialIcon{
  color: #ff445a;
