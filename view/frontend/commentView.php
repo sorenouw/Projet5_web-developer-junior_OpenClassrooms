@@ -76,6 +76,7 @@ echo $_SESSION["flash"]; ?>
         <button type="submit" name="1">Commenter</button>
       </div>
     </form>
+    <?php include("view/frontend/footer.php"); ?>
     <?php $content = ob_get_clean(); ?>
 
     <?php require('view/frontend/template.php'); ?>

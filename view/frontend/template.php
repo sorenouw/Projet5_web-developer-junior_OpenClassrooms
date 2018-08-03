@@ -8,11 +8,13 @@
         <link href="public/css/base.css" rel="stylesheet" />
         <link href="public/css/layout.css" rel="stylesheet" />
         <link href="public/css/theme.css" rel="stylesheet" />
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
         <!-- font -->
         <link href='https://fonts.googleapis.com/css?family=Old Standard TT' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <!-- favicon -->
-        <link rel="icon" type="image/png" href="public/img/favicon.png" />
+        <link rel="icon" type="image/png" href="public/img/logo.png" />
     </head>
 
     <body>
