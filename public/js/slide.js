@@ -31,9 +31,9 @@ var slider = {
     button2.style.position = "absolute";
     newDiv.appendChild(button1);
     newDiv.appendChild(button2);
-    button1.className = "far fa-arrow-alt-circle-left";
+    button1.className = "fas fa-chevron-circle-left";
     button1.style.fontSize = "2em";
-    button2.className = "far fa-arrow-alt-circle-right";
+    button2.className = "fas fa-chevron-circle-right";
     button2.style.fontSize = "2em";
     button1.style.top = "40%";
     button2.style.top = "40%";
@@ -41,10 +41,10 @@ var slider = {
     button2.style.right = "10px";
     button1.style.color = "white";
     button2.style.color = "white";
-    button1.style.backgroundColor = "#3cb0fd";
+    button1.style.backgroundColor = "#ff445a";
     button1.style.padding = "5px 5px 5px 5px";
     button1.style.borderRadius = "25px";
-    button2.style.backgroundColor = "#3cb0fd";
+    button2.style.backgroundColor = "#ff445a";
     button2.style.padding = "5px 5px 5px 5px";
     button2.style.borderRadius = "25px";
 
@@ -80,7 +80,7 @@ var slider = {
 
   },
 
-  // on enrigne la touche du préssée (e) et apelle les méthodes si ces touches sont droite ou gauche
+  // next et previous sur clavier
   changeSlideOnKeypress: function() {
     $('body').keydown(function(e) {
       if (e.which === 39) {
@@ -93,10 +93,10 @@ var slider = {
 
   // on apelle les méthodes previous et next sur clic des fléches de navigation
   slideOnClick: function() {
-    document.querySelector(".fa-arrow-alt-circle-left").addEventListener("click", function() {
+    document.querySelector(".fa-chevron-circle-left").addEventListener("click", function() {
       slider1.previousSlide();
     });
-    document.querySelector(".fa-arrow-alt-circle-right").addEventListener("click", function() {
+    document.querySelector(".fa-chevron-circle-right").addEventListener("click", function() {
       slider1.nextSlide();
     });
   }
@@ -107,8 +107,8 @@ var slider1 = Object.create(slider);
 slider1.height = "auto";
 slider1.width = "100%";
 slider1.imgTab = [
-  "public/img/index.png",
-  "public/img/logo.png"
+  "public/img/img1.jpg",
+  "public/img/img2.jpg"
 ]
 
 // initialisation des methodes

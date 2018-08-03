@@ -4,13 +4,13 @@
 <?php include("view/frontend/headerImg.php"); ?>
 
   <body>
-<p><a href="index.php">Retourner sur l'accueil</a></p>
+<p><a href="index.php" class="red">Retourner sur l'accueil</a></p>
 
     <form class="" action="index.php?action=login" method="post">
       <input type="text" name="login" value="" placeholder="login">
       <input type="password" name="password" value="" placeholder="password">
       <br>
-      <button type="submit" name="button">Connection</button>
+      <button type="submit" name="button" class="red">Connection</button>
     </form>
 
     <!-- message d'erreur -->
