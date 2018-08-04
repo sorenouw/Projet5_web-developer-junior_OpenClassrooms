@@ -3,10 +3,16 @@
 header {
   display: flex;
   align-items: center;
-  justify-content:  space-between;
+  justify-content:  flex-end;
   padding: 3px 10px 3px 10px;
   height: 40px;
   border-bottom: 2px solid #ff445a;
+}
+i{
+  padding-right: 5px;
+}
+nav{
+  padding-right: 30px;
 }
 .headerFixed{
   position: fixed;
@@ -17,7 +23,7 @@ header {
 .headerLogo{
   position: fixed;
   top: 0;
-  left: 300px;
+  left: 10%;
   width: 100%;
   z-index: 99;
   height: 100px;
@@ -104,18 +110,18 @@ figure:hover figcaption {
 
 /*----- Post and Comment -----*/
 
-.right {
-  position: absolute;
-  right: 10px;
-}
-
 .post_view {
   max-width: 80%;
   margin: auto;
   text-align: justify;
   display: flex;
+  flex-wrap: wrap;
 }
-
+.postImg{
+height: auto;
+width: 100%;
+max-width: 500px;
+}
 .comment {
   margin: auto;
   padding: 5px;

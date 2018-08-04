@@ -6,7 +6,7 @@
 
 
 <img src="public/img/logo.png" alt="" class="headerLogo">
-<p><a class="right" href="index.php">Accueil</a></p>
+
 <?php
 
 // commentaire signalé ou erreur pour commenter
@@ -23,7 +23,7 @@ echo $_SESSION["flash"]; ?>
 
   <article class="post_view">
     <div class="">
-          <img src="<?php echo $post->folder() ;?>"/></img>
+          <img class="postImg" src="<?php echo $post->folder() ;?>"/></img>
     </div>
     <div class="">
       <h3><?php echo $post->title(); ?></h3>

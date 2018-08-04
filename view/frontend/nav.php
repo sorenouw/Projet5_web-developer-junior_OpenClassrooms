@@ -1,6 +1,7 @@
 <header class="white headerFixed">
-<a href="index.php" class="red">Accueil</a>
+
 <nav>
+  <a href="index.php" class="socialIcon"><i class="fas fa-home"></i></a>
 <a href="#" class="socialIcon"><i class="fab fa-instagram" ></i></a>
 <a href="#" class="socialIcon"><i class="fab fa-facebook-square"></i></a>
 

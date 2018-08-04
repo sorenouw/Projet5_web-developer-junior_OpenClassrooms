@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "vendor/autoload.php";
+
 // Models
 require "model/Database.php";
 require "model/Manager.php";
