@@ -119,6 +119,8 @@ class BackController
         if (isset($_POST['5']) && !empty($_POST)) {
             $title = $_POST['title'];
             $content = $_POST['content'];
+            $timing = $_POST['timing'];
+            $serving= $_POST['serving'];
             $folderPath = "public/uploads/" . basename($_FILES["image"]["name"]);
             $validation = true;
             if (empty($title) && empty($content)) {
@@ -134,6 +136,8 @@ class BackController
                 $article = new Article(array(
             'title'=> $title,
             'content'=> $content,
+            'timing'=> $timing,
+            'serving'=> $serving,
             'folder'=> $folderPath,
           ));
           $articleManager->add($article);

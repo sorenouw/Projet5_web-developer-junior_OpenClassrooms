@@ -2,6 +2,8 @@
 class Article {
   private $_title;
   private $_content;
+  private $_timing;
+  private $_serving;
   private $_folder;
   private $_date;
   private $_id;
@@ -16,6 +18,12 @@ class Article {
     }
     if(isset($data["content"])){
       $this->setContent($data[ "content"]);
+    }
+    if(isset($data["timing"])){
+      $this->setTiming($data[ "timing"]);
+    }
+    if(isset($data["serving"])){
+      $this->setServing($data[ "serving"]);
     }
     if(isset($data["folder"])){
       $this->setFolder($data[ "folder"]);
@@ -35,6 +43,14 @@ class Article {
 
   public function content(){
     return $this->_content;
+  }
+
+  public function timing(){
+    return $this->_timing;
+  }
+
+  public function serving(){
+    return $this->_serving;
   }
 
   public function folder(){
@@ -58,6 +74,16 @@ class Article {
   public function setContent($content){
     if(is_string($content)){
       $this->_content = $content;
+    }
+  }
+  public function setTiming($timing){
+    if(is_string($timing)){
+      $this->_timing = $timing;
+    }
+  }
+  public function setServing($serving){
+    if(is_string($serving)){
+      $this->_serving = $serving;
     }
   }
   public function setFolder($folder){
