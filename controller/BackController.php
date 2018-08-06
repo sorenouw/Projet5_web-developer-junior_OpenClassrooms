@@ -55,6 +55,7 @@ class BackController
             // édition
             if (isset($_POST['3']) && !empty($_POST)) {
                 $post = $_POST['post'];
+                $title = $_POST['title'];
                 $id = $_GET['id'];
                 $validation = true;
                 if (empty($post)) {
@@ -63,6 +64,7 @@ class BackController
                 if ($validation === true) {
                     $articleManager = new ArticleManager();
                     $article = new Article(array(
+                      'title'=>$title,
              'content'=>$post,
              'id'=> $id,
          ));

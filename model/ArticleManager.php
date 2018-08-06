@@ -31,8 +31,9 @@ class ArticleManager extends Manager {
    }
 
    public function editPost(Article $article){
-     $req = $this->getDb()->prepare("UPDATE post SET content = :content WHERE id = :id");
+     $req = $this->getDb()->prepare("UPDATE post SET title = :title, content = :content WHERE id = :id");
      $req->execute(array(
+       'title' => $article->title(),
      'content'=> $article->content(),
      'id'=> $article->id(),
      ));

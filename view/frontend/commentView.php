@@ -22,11 +22,11 @@ echo $_SESSION["flash"]; ?>
 ?>
 
   <article class="post_view">
-    <div class="">
+    <div class="postImg">
           <img class="postImg" src="<?php echo $post->folder() ;?>"/></img>
     </div>
-    <div class="">
-      <h3><?php echo $post->title(); ?></h3>
+    <div class="postText">
+              <h3><?php echo $post->title(); ?></h3>
         <p>
           <?php
         echo $post->content();
@@ -65,17 +65,18 @@ echo $_SESSION["flash"]; ?>
 
     <form action="index.php?action=commentView&id=<?= $_GET['id']  ?>" method="post">
       <div>
-        <label for="author">Auteur</label><br />
-        <input type="text" id="author" name="author" />
+        <input type="text" id="author" name="author" placeholder="Votre nom" />
       </div>
       <div>
-        <label for="comment">Commentaire</label> <br />
-        <textarea id="comment" name="comment"></textarea>
+        <textarea id="comment" name="comment" placeholder="Commentez ici !"></textarea>
       </div>
       <div>
-        <button type="submit" name="1">Commenter</button>
+        <button type="submit" class="red" name="1">Commenter</button>
       </div>
     </form>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/slide.js"></script>
     <?php include("view/frontend/footer.php"); ?>
     <?php $content = ob_get_clean(); ?>
 

@@ -19,6 +19,8 @@
   <?php endforeach; ?>
 
 </section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="public/js/slide.js"></script>
 <?php include("view/frontend/footer.php"); ?>
 <?php $content = ob_get_clean(); ?>
 <?php require('view/frontend/template.php'); ?>

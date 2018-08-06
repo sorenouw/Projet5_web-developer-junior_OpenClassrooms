@@ -24,7 +24,6 @@
         <!-- tinymce -->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'.editor' });</script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="public/js/slide.js"></script>
+        
     </body>
 </html>

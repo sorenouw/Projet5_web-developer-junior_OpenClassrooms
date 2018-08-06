@@ -8,6 +8,9 @@ header {
   height: 40px;
   border-bottom: 2px solid #ff445a;
 }
+.headerTitle{
+    margin: auto;
+}
 i{
   padding-right: 5px;
 }
@@ -23,11 +26,22 @@ nav{
 .headerLogo{
   position: fixed;
   top: 0;
-  left: 10%;
+  left: 30px;
   width: 100%;
   z-index: 99;
   height: 100px;
   width: auto;
+}
+@media all and (max-width: 720px){
+  .headerLogo{
+    position: fixed;
+    top: 0;
+    left: 30px;
+    width: 100%;
+    z-index: 99;
+    height: 45px;
+    width: auto;
+  }
 }
 /*----- header img -----*/
 
@@ -81,7 +95,7 @@ figure a {
 figure {
   position: relative;
   overflow: hidden;
-  height: 150px;
+  height: 140px;
   width: 250px;
   margin: 15px;
   background-color: rgba(0, 0, 0, 0);
@@ -111,7 +125,7 @@ figure:hover figcaption {
 /*----- Post and Comment -----*/
 
 .post_view {
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
   text-align: justify;
   display: flex;
@@ -121,6 +135,11 @@ figure:hover figcaption {
 height: auto;
 width: 100%;
 max-width: 500px;
+margin-left: auto;
+}
+.postText{
+  margin-left: 10px;
+  margin-right: auto;
 }
 .comment {
   margin: auto;
@@ -134,7 +153,44 @@ max-width: 500px;
   justify-content: center;
 }
 textarea{
-  max-width: 80%;
+  margin-top: 10px;
+  width: 60%;
+  height: 100px;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+  border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+  border-image: none;
+  border-radius: 6px 6px 6px 6px;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+  color: #555555;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 5px 8px;
+  transition: background-color 0.2s ease 0s;
+}
+input{
+  margin-top: 10px;
+  width: 120px;
+  height: 20px;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.07);
+  border-color: -moz-use-text-color #FFFFFF #FFFFFF -moz-use-text-color;
+  border-image: none;
+  border-radius: 6px 6px 6px 6px;
+  border-style: none solid solid none;
+  border-width: medium 1px 1px medium;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12) inset;
+  color: #555555;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 5px 8px;
+  transition: background-color 0.2s ease 0s;
+}
+textarea:focus, input:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    outline-width: 0;
 }
 /*----- footer -----*/
 footer{
@@ -196,5 +252,16 @@ td {
   }
   em{
     font-size: 14px;
+  }
+  .post_view {
+flex-direction: column;
+  }
+  .postImg{
+margin: auto;
+  }
+}
+@media all and (max-width: 480px){
+  h1{
+    display: none;
   }
 }
