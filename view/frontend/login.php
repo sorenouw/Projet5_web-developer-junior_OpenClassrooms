@@ -4,7 +4,7 @@
 <?php include("view/frontend/headerImg.php"); ?>
 
   <body>
-<p><a href="index.php" class="red">Retourner sur l'accueil</a></p>
+<p class="login"><a href="index.php" class="red">Retourner sur l'accueil</a></p>
 
     <form class="" action="index.php?action=login" method="post">
       <input type="text" name="login" value="" placeholder="login">

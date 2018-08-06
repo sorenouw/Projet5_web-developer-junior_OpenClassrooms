@@ -32,4 +32,8 @@ p{
 }
 i{
   font-size: 26px;
+  color: #ff445a;
+}
+.login{
+  padding-top: 50px;
 }

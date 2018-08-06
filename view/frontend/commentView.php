@@ -27,8 +27,8 @@ echo $_SESSION["flash"]; ?>
     </div>
     <div class="postText">
               <h3><?php echo $post->title(); ?></h3>
-              <p><?php echo $post->timing(); ?></p>
-              <p>Pour <?php echo $post->serving(); ?> personnes.</p>
+              <p><?php echo $post->timing(); ?> <i class="fas fa-stopwatch"></i></p>
+              <p>Pour <?php echo $post->serving(); ?> personnes. <i class="fas fa-utensils"></i></p>
         <p>
           <?php
         echo $post->content();
