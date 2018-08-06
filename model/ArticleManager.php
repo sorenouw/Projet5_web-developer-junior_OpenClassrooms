@@ -13,7 +13,7 @@ class ArticleManager extends Manager {
 
    public function getList(){
      $articles = [];
-     $req = $this->getDb()->query("SELECT id, title, content, folder, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 9");
+     $req = $this->getDb()->query("SELECT id, title, content, folder, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 12");
      while ($data = $req->fetch()){
        $articles[]=new Article($data);
      }
