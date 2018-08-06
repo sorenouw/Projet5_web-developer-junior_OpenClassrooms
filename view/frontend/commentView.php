@@ -28,7 +28,7 @@ echo $_SESSION["flash"]; ?>
     <div class="postText">
               <h3><?php echo $post->title(); ?></h3>
               <p><?php echo $post->timing(); ?></p>
-              <p>Pour <?php echo $post->serving(); ?>personnes.</p>
+              <p>Pour <?php echo $post->serving(); ?> personnes.</p>
         <p>
           <?php
         echo $post->content();
@@ -70,7 +70,7 @@ echo $_SESSION["flash"]; ?>
         <input type="text" id="author" name="author" placeholder="Votre nom" />
       </div>
       <div>
-        <textarea id="comment" name="comment" placeholder="Commentez ici !"></textarea>
+        <textarea rows="4" cols="40" id="comment" name="comment" placeholder="Commentez ici !"></textarea>
       </div>
       <div>
         <button type="submit" class="red" name="1">Commenter</button>

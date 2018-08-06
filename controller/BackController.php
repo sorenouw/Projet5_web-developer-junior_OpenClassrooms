@@ -56,6 +56,8 @@ class BackController
             if (isset($_POST['3']) && !empty($_POST)) {
                 $post = $_POST['post'];
                 $title = $_POST['title'];
+                $timing = $_POST['timing'];
+                $serving = $_POST['serving'];
                 $id = $_GET['id'];
                 $validation = true;
                 if (empty($post)) {
@@ -65,9 +67,11 @@ class BackController
                     $articleManager = new ArticleManager();
                     $article = new Article(array(
                       'title'=>$title,
-             'content'=>$post,
-             'id'=> $id,
-         ));
+                      'content'=>$post,
+                      'timing'=> $timing,
+                      'serving'=> $serving,
+                      'id'=> $id,
+                    ));
                     $articleManager->editPost($article);
                     header('Location: index.php?action=admin');
                 }

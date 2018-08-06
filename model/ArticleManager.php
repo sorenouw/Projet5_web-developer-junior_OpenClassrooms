@@ -15,7 +15,7 @@ class ArticleManager extends Manager {
 
    public function getList(){
      $articles = [];
-     $req = $this->getDb()->query("SELECT id, title,  DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 12");
+     $req = $this->getDb()->query("SELECT id, title, folder,  DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post ORDER BY date_publish DESC LIMIT 0, 12");
      while ($data = $req->fetch()){
        $articles[]=new Article($data);
      }
@@ -33,10 +33,12 @@ class ArticleManager extends Manager {
    }
 
    public function editPost(Article $article){
-     $req = $this->getDb()->prepare("UPDATE post SET title = :title, content = :content WHERE id = :id");
+     $req = $this->getDb()->prepare("UPDATE post SET title = :title, content = :content, timing = :timing, serving = :serving WHERE id = :id");
      $req->execute(array(
        'title' => $article->title(),
      'content'=> $article->content(),
+     'timing' => $article->timing(),
+     'serving' => $article->serving(),
      'id'=> $article->id(),
      ));
    }
