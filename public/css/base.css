@@ -4,19 +4,19 @@ html, body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Old Standard TT';
+  font-family: 'Dekko';
   font-size: 18px;
 }
 
 h1 {
   font-size: 30px;
-  font-family: 'Montserrat';
+  font-family: 'Dekko';
 }
 h2{
-  font-family: 'Montserrat';
+  font-family: 'Dekko';
 }
 h3 {
-  font-family: 'Montserrat';
+  font-family: 'Dekko';
   margin: 3px;
     font-size: 30px;
 }

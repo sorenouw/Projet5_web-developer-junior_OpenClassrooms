@@ -7,13 +7,22 @@
 
 
 
-
 <nav>
-  <a href="index.php" class="socialIcon"><i class="fas fa-home"></i></a>
+
+  <ul id="menu-deroulant">
+    <li><a href="index.php">Accueil</a></li>
+  	<li><p>Toutes les recettes</p>
+  		<ul>
+  			<li><a href="#">Entrée</a></li>
+  			<li><a href="#">Plat</a></li>
+  			<li><a href="#">Dessert</a></li>
+  			<li><a href="#">Gateau</a></li>
+  		</ul>
+  	</li>
+    <li><a href="#">Qui suis-je ?</a></li>
+  </ul>
+</nav>
+
 <a href="#" class="socialIcon"><i class="fab fa-instagram" ></i></a>
 <a href="#" class="socialIcon"><i class="fab fa-facebook-square"></i></a>
-
-
-
-</nav>
 </header>

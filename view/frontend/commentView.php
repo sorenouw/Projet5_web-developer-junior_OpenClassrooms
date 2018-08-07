@@ -21,21 +21,22 @@ echo $_SESSION["flash"]; ?>
 }
 ?>
 
-  <article class="post_view">
-    <div class="postImg">
-          <img class="postImg" src="<?php echo $post->folder() ;?>"/></img>
+  <article class="">
+    <div class="post_view">
+      <div class="postImg">
+            <img class="postImg" src="<?php echo $post->folder() ;?>"/></img>
+      </div>
+      <div class="postText">
+                <h3><?php echo $post->title(); ?></h3>
+                <p><?php echo $post->timing(); ?> <i class="fas fa-stopwatch"></i></p>
+                <p>Pour <?php echo $post->serving(); ?> personnes. <i class="fas fa-utensils"></i></p>
+                    <p>le <?php echo $post->date(); ?></p>
+      </div>
     </div>
-    <div class="postText">
-              <h3><?php echo $post->title(); ?></h3>
-              <p><?php echo $post->timing(); ?> <i class="fas fa-stopwatch"></i></p>
-              <p>Pour <?php echo $post->serving(); ?> personnes. <i class="fas fa-utensils"></i></p>
-        <p>
-          <?php
-        echo $post->content();
-        ?>
-        </p>
-        <em>le <?php echo $post->date(); ?></em>
-    </div>
+
+
+    <p><?php echo $post->content();?></p>
+
   </article>
 
 

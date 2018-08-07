@@ -3,9 +3,8 @@ a, button {
   margin: 1px;
   border-radius: 3px;
   text-decoration: none;
-  font-size: 16px;
   border: 0px;
-  font-family: 'Old Standard TT';
+  font-family: 'Dekko';
 }
 a:hover, button:hover{
   color: pink;
