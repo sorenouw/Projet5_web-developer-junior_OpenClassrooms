@@ -55,6 +55,8 @@ header {
 #menu-deroulant ul li {
 /* on enlève ce comportement pour les liens du sous menu */
     display: inherit;
+    text-align: center;
+    width: 150px;
 }
 #menu-deroulant a {
     text-decoration: none;
@@ -85,7 +87,6 @@ header {
   max-width: 100%;
   height: auto;
   border-bottom: 2px solid #ff445a;
-  margin-bottom: 30px;
 }
 
 .imgTitle {

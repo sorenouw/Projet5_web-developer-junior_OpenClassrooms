@@ -15,7 +15,7 @@
   		<ul>
   			<li><a href="#">Entrée</a></li>
   			<li><a href="#">Plat</a></li>
-  			<li><a href="#">Dessert</a></li>
+  			<li><a href="#">Douceurs</a></li>
   			<li><a href="#">Gateau</a></li>
   		</ul>
   	</li>

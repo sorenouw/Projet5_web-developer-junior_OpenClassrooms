@@ -4,6 +4,9 @@
 <?php include("view/frontend/headerImg.php"); ?>
 
 <img src="public/img/logo.png" alt="" class="headerLogo">
+
+  <h2>Dérnières recettes</h2>
+  
 <section class="index_posts">
 
     <?php foreach ($articles as $article): ?>
@@ -14,7 +17,6 @@
           <p><strong><?php echo htmlspecialchars($article->title()); ?></strong></p>
         </figcaption>
       </figure>
-
 
   <?php endforeach; ?>
 

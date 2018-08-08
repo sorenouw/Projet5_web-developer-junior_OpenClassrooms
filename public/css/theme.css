@@ -24,7 +24,7 @@ a:hover, button:hover{
 button{
   cursor: pointer;
 }
-h3 {
+h2, h3 {
   color: red;
 }
 h5{
