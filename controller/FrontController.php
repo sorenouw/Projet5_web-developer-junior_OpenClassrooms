@@ -4,6 +4,11 @@ class FrontController{
     $articleManager = new ArticleManager();
     $articles = $articleManager->getList();
 
+    $instagram = new Instagram('sorenouw');
+    $images = $instagram->getMedia(3); // get only latest 3 images
+    foreach ($images as $p) {
+      // some html code here
+    }
     require ('view/frontend/home.php');
   }
   public function commentView(){

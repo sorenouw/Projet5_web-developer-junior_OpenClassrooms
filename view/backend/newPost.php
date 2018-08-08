@@ -9,8 +9,14 @@
       <label for="title">Titre</label><br />
       <input type="text" id="title" name="title" />
   </div>
-  <div>
-    <input type="file" name="image" />
+  <div class="custom-file-container" data-upload-id="upload">
+      <label>Votre image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
+      <label class="custom-file-container__custom-file" >
+          <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple>
+          <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
+          <span class="custom-file-container__custom-file__custom-file-control"></span>
+      </label>
+      <div class="custom-file-container__image-preview"></div>
   </div>
   <div>
       <label for="content">Contenu</label> <br />

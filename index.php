@@ -10,6 +10,8 @@ require "model/Comment.php";
 require "model/CommentManager.php";
 require "model/User.php";
 require "model/UserManager.php";
+
+require "model/Instagram.php";
 // Controllers
 require "controller/BackController.php";
 require "controller/FrontController.php";

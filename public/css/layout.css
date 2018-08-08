@@ -221,6 +221,10 @@ textarea:focus, input:hover {
     background: none repeat scroll 0 0 #FFFFFF;
     outline-width: 0;
 }
+.custom-file-container{
+  max-width: 500px;
+  margin: auto;
+}
 /*----- footer -----*/
 footer{
   margin-top: 30px;
