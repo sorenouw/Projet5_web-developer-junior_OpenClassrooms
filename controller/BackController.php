@@ -63,6 +63,7 @@ class BackController
                 $title = $_POST['title'];
                 $timing = $_POST['timing'];
                 $serving = $_POST['serving'];
+                $category = $_POST['category'];
                 $id = $_GET['id'];
                 $validation = true;
                 if (empty($post)) {
@@ -75,6 +76,7 @@ class BackController
                       'content'=>$post,
                       'timing'=> $timing,
                       'serving'=> $serving,
+                      'category'=> $category,
                       'id'=> $id,
                     ));
                     $articleManager->editPost($article);
@@ -110,9 +112,9 @@ class BackController
                 if ($validation === true) {
                     $commentManager = new CommentManager();
                     $comment = new Comment(array(
-             'comment'=>$newComment,
-             'id'=> $id,
-         ));
+                      'comment'=>$newComment,
+                      'id'=> $id,
+                    ));
                     $commentManager->editComment($comment);
                     header('Location: index.php?action=commentView&id=' . $_GET['id']);
                 }
@@ -130,6 +132,7 @@ class BackController
             $content = $_POST['content'];
             $timing = $_POST['timing'];
             $serving= $_POST['serving'];
+            $category = $_POST['category'];
             $folderPath = "public/uploads/" . basename($_FILES["image"]["name"]);
             $validation = true;
             if (empty($title) && empty($content)) {
@@ -147,6 +150,7 @@ class BackController
             'content'=> $content,
             'timing'=> $timing,
             'serving'=> $serving,
+            'category'=> $category,
             'folder'=> $folderPath,
           ));
           $articleManager->add($article);

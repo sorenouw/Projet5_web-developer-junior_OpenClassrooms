@@ -1,6 +1,9 @@
 <?php $title = 'Nouveau Post'; ?>
 
 <?php ob_start(); ?>
+<?php include("view/frontend/nav.php"); ?>
+<img src="public/img/logo.png" alt="" class="headerLogo">
+
         <p><a class="red" href="index.php?action=admin">Retour à l'interface d'admninistration</a></p>
 
 
@@ -26,6 +29,12 @@
       <label for="serving">Serving</label><br />
       <input type="text" id="serving" name="serving" />
   </div>
+  <input list="category" name="category" value="">
+  <datalist id="category" >
+    <option value="1">Entrée</option>
+    <option value="2">Plat</option>
+    <option value="3">Douceur</option>
+</datalist>
   <div>
       <label for="content">Contenu</label> <br />
       <textarea class="editor" id="content" name="content" rows="10" cols="80"></textarea>

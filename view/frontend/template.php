@@ -17,6 +17,7 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <!-- favicon -->
         <link rel="icon" type="image/png" href="public/img/logo.png" />
+
     </head>
 
     <body>
