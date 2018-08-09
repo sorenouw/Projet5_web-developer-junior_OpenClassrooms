@@ -23,6 +23,18 @@ class ArticleManager extends Manager {
      return $articles;
    }
 
+   public function getCategory(Article $article){
+     $articles = [];
+     $req = $this->getDb()->prepare("SELECT * FROM post WHERE category = :category ORDER BY date_publish DESC");
+     $req->execute(array(
+    'category'=> $article->category(),
+    ));
+     while ($data = $req->fetch()){
+       $articles[]=new Article($data);
+     }
+     return $articles;
+   }
+
    public function getPost($id){
      $req = $this->getDb()->prepare("SELECT id, title, content, timing, serving, category, folder, DATE_FORMAT(date_publish, '%d/%m/%Y à %Hh%imin%ss') AS date_publish FROM post WHERE id = :id");
      $req->execute(array(

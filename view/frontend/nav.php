@@ -13,10 +13,9 @@
     <li><a href="index.php">Accueil</a></li>
   	<li><p>Toutes les recettes</p>
   		<ul>
-  			<li><a href="#">Entrée</a></li>
-  			<li><a href="#">Plat</a></li>
-  			<li><a href="#">Douceurs</a></li>
-  			<li><a href="#">Gateau</a></li>
+  			<li><a href="index.php?action=category&id=1">Entrée</a></li>
+  			<li><a href="index.php?action=category&id=2">Plat</a></li>
+  			<li><a href="index.php?action=category&id=3">Douceurs</a></li>
   		</ul>
   	</li>
     <li><a href="#">Qui suis-je ?</a></li>

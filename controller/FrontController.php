@@ -11,6 +11,23 @@ class FrontController{
     }
     require ('view/frontend/home.php');
   }
+  public function category(){
+    $articleManager = new ArticleManager();
+    $category = $_GET['id'];
+    $article = new Article(array(
+        'category'=>$category,
+    ));
+    $articles = $articleManager->getCategory($article);
+
+    $commentManager = new CommentManager();
+    $postId = $_GET['id'];
+    $comment = new Comment(array(
+        'postId'=>$postId,
+    ));
+    $comments = $commentManager->getList($comment);
+
+    require ('view/frontend/category.php');
+  }
   public function commentView(){
     // Récupération du billet
       $articleManager = new ArticleManager();

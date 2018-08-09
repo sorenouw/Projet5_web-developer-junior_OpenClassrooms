@@ -29,6 +29,9 @@ elseif (isset($_GET['action'])) {
     if ($_GET['action'] == 'commentView') {
         $frontController->commentView();
     }
+    if ($_GET['action'] == 'category') {
+        $frontController->category();
+    }
     elseif ($_GET['action'] == 'login') {
       $frontController->login();
     }
