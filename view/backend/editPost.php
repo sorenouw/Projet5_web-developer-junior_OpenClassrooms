@@ -1,11 +1,11 @@
 <?php $title = 'edit post'; ?>
 
 <?php ob_start(); ?>
-<body>
+
   <h2>Modifier cet article.</h2>
   <img class="postImg" src="<?php echo $editPost->folder() ;?>"/></img>
   <form class="" action="index.php?action=editPost&id=<?= $editPost->id(); ?>" method="post">
-    <p>Title</p>
+    <p>Titre</p>
     <textarea  cols="30" rows="1" name="title"><?php echo nl2br(htmlspecialchars($editPost->title())); ?></textarea>
     <p>Temps de préparation</p>
     <textarea  cols="30" rows="1" name="timing"><?php echo nl2br(htmlspecialchars($editPost->timing())); ?></textarea>

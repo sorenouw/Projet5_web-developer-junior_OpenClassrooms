@@ -17,7 +17,12 @@ class BackController
     public function deletePost()
     {
         $id = $_GET['id'];
-        $articleManager = new ArticleManager();
+                $articleManager = new ArticleManager();
+        $file = $articleManager->getPost($id);
+
+        unlink($file->folder());
+
+
         $article = new Article(array(
           'id'=>$id,
         ));
@@ -120,7 +125,7 @@ class BackController
     public function newPost()
     {
         // poster un article
-        if (isset($_POST['5']) && !empty($_POST)) {
+        if (isset($_POST) && !empty($_POST)) {
             $title = $_POST['title'];
             $content = $_POST['content'];
             $timing = $_POST['timing'];
@@ -145,6 +150,7 @@ class BackController
             'folder'=> $folderPath,
           ));
           $articleManager->add($article);
+
         }
             header('Location: index.php');
     }

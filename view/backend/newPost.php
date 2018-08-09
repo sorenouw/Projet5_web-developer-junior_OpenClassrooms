@@ -12,11 +12,19 @@
   <div class="custom-file-container" data-upload-id="upload">
       <label>Votre image <a href="javascript:void(0)" class="custom-file-container__image-clear" title="Clear Image">x</a></label>
       <label class="custom-file-container__custom-file" >
-          <input type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple>
+          <input name="image" type="file" class="custom-file-container__custom-file__custom-file-input" accept="*" multiple>
           <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
           <span class="custom-file-container__custom-file__custom-file-control"></span>
       </label>
       <div class="custom-file-container__image-preview"></div>
+  </div>
+  <div>
+      <label for="timing">Timing</label><br />
+      <input type="text" id="timing" name="timing" />
+  </div>
+  <div>
+      <label for="serving">Serving</label><br />
+      <input type="text" id="serving" name="serving" />
   </div>
   <div>
       <label for="content">Contenu</label> <br />
