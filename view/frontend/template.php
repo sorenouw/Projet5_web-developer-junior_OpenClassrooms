@@ -24,11 +24,13 @@
 
         <?= $content ?>
 
+                <script type="text/javascript" src="public/js/instafeed.min.js"></script>
+                <script type="text/javascript" src="public/js/instafeed.js"></script>
         <!-- tinymce -->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'.editor' });</script>
-        <script src="https://unpkg.com/file-upload-with-preview"></script>
-        <script>var upload = new FileUploadWithPreview('upload')</script>
+
+
 
     </body>
 </html>

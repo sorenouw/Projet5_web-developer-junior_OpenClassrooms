@@ -43,6 +43,9 @@
         <button class="red" type="submit" name="5">Poster !</button>
     </div>
 </form>
+
+<script src="https://unpkg.com/file-upload-with-preview"></script>
+<script>var upload = new FileUploadWithPreview('upload')</script>
 <?php $content = ob_get_clean(); ?>
 
 	<?php require('view/frontend/template.php'); ?>
