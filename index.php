@@ -59,6 +59,12 @@ elseif (isset($_GET['action'])) {
     elseif ($_GET['action'] == '404') {
       $frontController->errorPage();
     }
+    elseif ($_GET['action'] == 'mentions') {
+      $frontController->mentions();
+    }
+    elseif ($_GET['action'] == 'qui') {
+      $frontController->qui();
+    }
 }
 else {
     listPosts();

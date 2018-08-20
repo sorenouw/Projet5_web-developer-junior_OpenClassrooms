@@ -1,34 +1,56 @@
 .button {
-  padding: 6px 10px;
+  font-size: 16px;
+  padding: 6px 8px;
   margin: 1px;
   border-radius: 3px;
   text-decoration: none;
   border: 0px;
   font-family: 'Dekko';
+  outline: none;
 }
 .button:hover{
   color: pink;
 }
 .socialIcon{
- color: #ff445a;
  padding: 0;
 }
 .white{
   color: #ff445a;
   background-color: white;
 }
-.red{
+.green{
+  color: white;
+  background-color: green;
+  text-decoration: none;
+}
+.pink{
   background-color: #ff445a;
+  text-decoration: none;
+  color: white;
+}
+.red{
+  background-color: red;
+  text-decoration: none;
+  color: white;
+}
+.toggle1:focus{
+  background-color: #ff445a;
+  outline: none;
+  color: white;
+}
+.toggle2:focus{
+  background-color: #ff445a;
+  outline: none;
   color: white;
 }
 button{
   cursor: pointer;
 }
-h2, h3 {
-  color: red;
+h1, h2, h3 {
+  color: #ff445a;
 }
 h5{
-  color: red;
+  color: #ff445a;
   font-size: 20px;
 }
 figure{
@@ -56,4 +78,10 @@ footer{
   justify-content: space-between;
     padding: 3px 10px 3px 10px;
   height: 40px;
+}
+header nav ul li p {
+  color: #ff445a;
+}
+figure figcaption p {
+  color: white;
 }

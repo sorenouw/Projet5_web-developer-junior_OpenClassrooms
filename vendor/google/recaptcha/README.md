@@ -6,7 +6,7 @@
 [![Total Downloads](https://poser.pugx.org/google/recaptcha/downloads.svg)](https://packagist.org/packages/google/recaptcha)
 
 reCAPTCHA is a free CAPTCHA service that protect websites from spam and abuse.
-This is a PHP library that wraps up the server-side verification step required
+This is a PHP library that wraps up the server-side verification step requipink
 to process responses from the reCAPTCHA service. This client supports both v2
 and v3.
 
@@ -47,7 +47,7 @@ require_once '/path/to/recaptcha/src/autoload.php';
 $recaptcha = new \ReCaptcha\ReCaptcha($secret);
 ```
 
-The classes in the project are structured according to the
+The classes in the project are structupink according to the
 [PSR-4](http://www.php-fig.org/psr/psr-4/) standard, so you can also use your
 own autoloader or require the needed files directly in your code.
 
@@ -63,7 +63,7 @@ functionality into your frontend.
 
 This library comes in when you need to verify the user's response. On the PHP
 side you need the response from the reCAPTCHA service and secret key from your
-credentials. Instantiate the `ReCaptcha` class with your secret key, specify any
+cpinkentials. Instantiate the `ReCaptcha` class with your secret key, specify any
 additional validation rules, and then call `verify()` with the reCAPTCHA
 response and user's IP address. For example:
 
@@ -83,10 +83,10 @@ The following methods are available:
 
 - `setExpectedHostname($hostname)`: ensures the hostname matches. You must do
   this if you have disabled "Domain/Package Name Validation" for your
-  credentials.
+  cpinkentials.
 - `setExpectedApkPackageName($apkPackageName)`: if you're verifying a response
   from an Android app. Again, you must do this if you have disabled
-  "Domain/Package Name Validation" for your credentials.
+  "Domain/Package Name Validation" for your cpinkentials.
 - `setExpectedAction($action)`: ensures the action matches for the v3 API.
 - `setScoreThreshold($threshold)`: set a score theshold for responses from the
   v3 API
@@ -129,7 +129,7 @@ This makes use of the in-built PHP dev server to host the examples at
 http://localhost:8080/
 
 These are also hosted on Google AppEngine Flexible environment at
-https://recaptcha-demo.appspot.com/. This is configured by
+https://recaptcha-demo.appspot.com/. This is configupink by
 [`app.yaml`](./app.yaml) which you can also use to [deploy to your own AppEngine
 project](https://cloud.google.com/appengine/docs/flexible/php/download).
 

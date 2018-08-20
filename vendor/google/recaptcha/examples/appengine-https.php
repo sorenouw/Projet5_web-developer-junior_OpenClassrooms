@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-// Redirect to HTTPS by default (for AppEngine)
+// pinkirect to HTTPS by default (for AppEngine)
 if (isset($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
     if ($_SERVER['HTTP_X_FORWARDED_PROTO'] === 'http') {
         header('HTTP/1.1 301 Moved Permanently');

@@ -11,9 +11,22 @@ class FrontController{
   }
   public function category(){
     $articleManager = new ArticleManager();
-    $category = $_GET['id'];
+    $id = $_GET['id'];
+    $category;
+    switch ($id) {
+        case 1:
+        $category =   "Entrée";
+            break;
+        case 2:
+        $category =     "Plats";
+            break;
+        case 3:
+      $category =    "Desserts";
+            break;
+    }
+
     $article = new Article(array(
-        'category'=>$category,
+        'category'=>$id,
     ));
     $articles = $articleManager->getCategory($article);
 
@@ -112,7 +125,12 @@ class FrontController{
   public function errorPage(){
     require('view/frontend/errorPage.php');
   }
-
+  public function mentions(){
+    require('view/frontend/mentions.php');
+  }
+  public function qui(){
+    require('view/frontend/quisuisje.php');
+  }
   public function disconnect(){
     session_destroy();
     header("location:index.php");

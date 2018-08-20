@@ -1,7 +1,8 @@
 var userFeed = new Instafeed({
   get: 'user',
-  userId: 1360796485,
-  accessToken: '1360796485.a279bd8.191957f779684f3eb04ca78d4916d35f',
-  template: '<a class="instafeed" href="{{link}}"><img src="{{image}}" /></a>'
+  userId: 473471489,
+  limit: 9,
+  accessToken: '473471489.6c9f008.6c79234a84d3424c89a78a682dce4768',
+  template: '<figure class="instafeed"><img src="{{image}}" />     <a class="icon" href="{{link}}"> <i class="fab fa-instagram"></i>  </a>       </figure>'
 });
   userFeed.run();

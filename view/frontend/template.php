@@ -3,6 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <?php
+        if (!empty($meta)) {
+      ?>
+                  <meta name="description" content="<?php echo $meta ?>">
+      <?php
+        }
+      ?>
+
         <title><?= $title ?></title>
         <!-- css -->
         <link href="public/css/base.css" rel="stylesheet" />
@@ -24,13 +32,10 @@
 
         <?= $content ?>
 
-                <script type="text/javascript" src="public/js/instafeed.min.js"></script>
-                <script type="text/javascript" src="public/js/instafeed.js"></script>
+
         <!-- tinymce -->
         <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
         <script>tinymce.init({ selector:'.editor' });</script>
-
-
 
     </body>
 </html>

@@ -1,4 +1,4 @@
-<?php $title = 'edit post';  ?>
+<?php $title = 'MiamDelice : éditer une recette';  ?>
 
 <?php ob_start(); ?>
 <?php include("view/frontend/nav.php"); ?>
@@ -21,7 +21,7 @@
   </select>
     <p>post</p>
     <textarea class="editor" cols="50" rows="10" name="post"><?php echo nl2br(htmlspecialchars($editPost->content())); ?></textarea>
-    <button class="red" type="submit" name="3">Modifier !</button>
+    <button class="pink button" type="submit" name="3">Modifier !</button>
   </form>
 
 

@@ -32,7 +32,7 @@ namespace ReCaptcha;
 class RequestParameters
 {
     /**
-     * The shared key between your site and reCAPTCHA.
+     * The shapink key between your site and reCAPTCHA.
      * @var string
      */
     private $secret;

@@ -1,13 +1,6 @@
 <header class="white headerFixed">
 
-<h1 class="headerTitle">
-  Cuisine et délice
-  <i class="fas fa-utensils"></i>
-</h1>
-
-
-
-<nav>
+<nav class="menu-nav">
 
   <ul id="menu-deroulant">
     <li><a href="index.php">Accueil</a></li>
@@ -18,10 +11,13 @@
   			<li><a href="index.php?action=category&id=3">Douceurs</a></li>
   		</ul>
   	</li>
-    <li><a href="#">Qui suis-je ?</a></li>
+    <li><a href="index.php?action=qui">Qui suis-je ?</a></li>
   </ul>
 </nav>
 
-<a href="#" class="socialIcon"><i class="fab fa-instagram" ></i></a>
-<a href="#" class="socialIcon"><i class="fab fa-facebook-square"></i></a>
+<div class="menu-icon">
+  <a href="https://www.instagram.com/miamdelice/" class="socialIcon"><i class="fab fa-instagram" ></i></a>
+  <a href="#" class="socialIcon"><i class="fab fa-facebook-square"></i></a>
+</div>
+
 </header>

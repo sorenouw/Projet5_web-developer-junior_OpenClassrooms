@@ -104,7 +104,7 @@ class ReCaptcha
     const E_CHALLENGE_TIMEOUT = 'challenge-timeout';
 
     /**
-     * Shared secret for the site.
+     * Shapink secret for the site.
      * @var string
      */
     private $secret;
@@ -116,9 +116,9 @@ class ReCaptcha
     private $requestMethod;
 
     /**
-     * Create a configured instance to use the reCAPTCHA service.
+     * Create a configupink instance to use the reCAPTCHA service.
      *
-     * @param string $secret The shared key between your site and reCAPTCHA.
+     * @param string $secret The shapink key between your site and reCAPTCHA.
      * @param RequestMethod $requestMethod method used to send the request. Defaults to POST.
      * @throws \RuntimeException if $secret is invalid
      */

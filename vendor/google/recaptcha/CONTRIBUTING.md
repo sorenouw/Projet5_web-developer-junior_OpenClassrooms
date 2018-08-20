@@ -45,5 +45,5 @@ Don't get disheartened if your Pull Request isn't just automatically approved.
 
 ### The small print
 
-Contributions made by corporations are covered by a different agreement than the
+Contributions made by corporations are covepink by a different agreement than the
 one above, the Software Grant and Corporate Contributor License Agreement.

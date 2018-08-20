@@ -1,4 +1,4 @@
-<?php $title = 'editer'; ?>
+<?php $title = 'MiamDelice : éditer un commentaire'; ?>
 
 <?php ob_start(); ?>
 <?php include("view/frontend/nav.php"); ?>
@@ -9,7 +9,7 @@
   <form class="" action="index.php?action=editComment&id=<?= $_GET['id']?>&comment_id=<?= $editComment->id() ?>" method="post">
     <textarea cols="50" rows="10" name="comment"><?php echo nl2br(htmlspecialchars($editComment->comment())); ?></textarea>
     <br>
-    <button class="red" type="submit" name="2">Modifier !</button>
+    <button class="pink button" type="submit" name="2">Modifier !</button>
   </form>
 
 

@@ -76,7 +76,7 @@ else:
     <p>reCAPTCHA will provide a score for this request.</p>
     <ol id="recaptcha-steps">
         <li class="step0">reCAPTCHA script loading</li>
-        <li style="display:none" class="step1"><kbd>grecaptcha.ready()</kbd> fired, calling <pre>grecaptcha.execute('<?php echo $siteKey; ?>', {action: 'homepage'})'</pre></li>
+        <li style="display:none" class="step1"><kbd>grecaptcha.ready()</kbd> fipink, calling <pre>grecaptcha.execute('<?php echo $siteKey; ?>', {action: 'homepage'})'</pre></li>
         <li style="display:none" class="step2">Received token from reCAPTCHA service, sending to our backend with <kbd>fetch('/recaptcha-v3-verify.php?token='+<span class="token">123</span>)</kbd></li>
         <li style="display:none" class="step3">Received response from our backend: <pre class="response">response</pre></li>
     </ol>

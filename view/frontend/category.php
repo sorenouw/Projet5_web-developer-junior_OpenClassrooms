@@ -1,24 +1,12 @@
-<?php $title = 'Miam Délice : Recettes de cusine.'; ?>
+<?php $meta = "Tout(e) les " . $category . "réalisé(e)s par MiamDelice"; ?>
+<?php $title = 'MiamDelice : ' . $category ; ?>
 <?php ob_start(); ?>
 <?php include("view/frontend/nav.php"); ?>
 <?php include("view/frontend/headerImg.php"); ?>
 
 <img src="public/img/logo.png" alt="" class="headerLogo">
 
-  <h2> <?php
-  switch ($_GET[ 'id']) {
-      case 1:
-          echo "Entrée";
-          break;
-      case 2:
-          echo "Plats";
-          break;
-      case 3:
-          echo "Desserts";
-          break;
-  }
-
-   ?> </h2>
+  <h2> <?php echo $category ?> </h2>
 
 <section class="index_posts">
 
