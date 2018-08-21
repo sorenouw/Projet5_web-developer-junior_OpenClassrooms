@@ -4,9 +4,6 @@ class FrontController{
     $articleManager = new ArticleManager();
     $articles = $articleManager->getList();
 
-    $instagram = new Instagram('473471489');
-    $images = $instagram->getMedia(3); // get only latest 3 images
-
     require ('view/frontend/home.php');
   }
   public function category(){

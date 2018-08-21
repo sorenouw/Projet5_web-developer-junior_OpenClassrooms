@@ -30,6 +30,7 @@
   <h2>#MiamDélice </h2>
  <div id="instafeed"></div>
 
+
 <?php include("view/frontend/footer.php"); ?>
 
 
