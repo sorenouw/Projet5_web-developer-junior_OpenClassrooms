@@ -17,7 +17,7 @@ class BackController
     public function deletePost()
     {
         $id = $_GET['id'];
-                $articleManager = new ArticleManager();
+        $articleManager = new ArticleManager();
         $file = $articleManager->getPost($id);
 
         unlink($file->folder());
@@ -153,11 +153,10 @@ class BackController
             'category'=> $category,
             'folder'=> $folderPath,
           ));
-          $articleManager->add($article);
-
-        }
+                $articleManager->add($article);
+            }
             header('Location: index.php');
+        }
+        require('view/backend/newPost.php');
     }
-            require('view/backend/newPost.php');
-  }
 }

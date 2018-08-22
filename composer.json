@@ -1,6 +1,4 @@
 {
     "require": {
-        "google/recaptcha": "^1.2",
-        "nette/robot-loader": "^3.0"
     }
 }

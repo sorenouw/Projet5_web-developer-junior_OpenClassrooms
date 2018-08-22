@@ -2,14 +2,15 @@
 
 class Manager
 {
-  private $_db;
+    private $_db;
 
-  public function __construct(){
-    $this->_db = Database::connect();
-  }
+    public function __construct()
+    {
+        $this->_db = Database::connect();
+    }
 
-  protected function getDb(){
-    return $this->_db;
-  }
-  
+    protected function getDb()
+    {
+        return $this->_db;
+    }
 }
