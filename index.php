@@ -1,19 +1,22 @@
 <?php
 session_start();
 
-// Models
-require "model/Database.php";
-require "model/Manager.php";
-require "model/Article.php";
-require "model/ArticleManager.php";
-require "model/Comment.php";
-require "model/CommentManager.php";
-require "model/User.php";
-require "model/UserManager.php";
+require "vendor/autoload.php";
 
-// Controllers
-require "controller/BackController.php";
-require "controller/FrontController.php";
+
+$loader = new Nette\Loaders\RobotLoader;
+
+// Add directories for RobotLoader to index
+$loader->addDirectory(__DIR__ . '/controller');
+$loader->addDirectory(__DIR__ . '/model');
+
+// And set caching to the 'temp' directory
+$loader->setTempDirectory(__DIR__ . '/temp');
+$loader->register(); // Run the RobotLoader
+
+
+use MiamDelice\Blog\Controller\BackController;
+use MiamDelice\Blog\Controller\FrontController;
 
   $frontController = new FrontController();
   $backController = new BackController();

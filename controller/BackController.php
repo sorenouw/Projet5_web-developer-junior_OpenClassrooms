@@ -1,5 +1,7 @@
 <?php
 
+namespace MiamDelice\Blog\Controller;
+
 use \MiamDelice\Blog\Model\Article;
 use \MiamDelice\Blog\Model\ArticleManager;
 use \MiamDelice\Blog\Model\Comment;
