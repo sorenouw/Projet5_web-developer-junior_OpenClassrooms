@@ -1,4 +1,7 @@
 <?php
+
+namespace MiamDelice\Blog\Model;
+
 class Database
 {
     private static $dbHost = "localhost";
@@ -9,7 +12,7 @@ class Database
     public static function connect()
     {
         try {
-            self::$connection = new PDO("mysql:host=". self::$dbHost .";dbname=". self::$dbName .";charset=utf8", self::$dbUser, self::$dbUserPassword);
+            self::$connection = new \PDO("mysql:host=". self::$dbHost .";dbname=". self::$dbName .";charset=utf8", self::$dbUser, self::$dbUserPassword);
         } catch (Exception $e) {
             die($e->getMessage());
         }

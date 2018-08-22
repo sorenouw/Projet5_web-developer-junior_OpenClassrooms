@@ -1,5 +1,7 @@
 <?php
 
+namespace MiamDelice\Blog\Model;
+
 class Manager
 {
     private $_db;

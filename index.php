@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+
+
+
 // Models
 require "model/Database.php";
 require "model/Manager.php";

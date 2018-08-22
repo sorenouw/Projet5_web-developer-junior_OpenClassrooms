@@ -1,14 +1,17 @@
 <?php
+
+namespace MiamDelice\Blog\Model;
+
 class Article
 {
     private $title;
-    private $_content;
-    private $_timing;
-    private $_serving;
-    private $_category;
-    private $_folder;
-    private $_date;
-    private $_id;
+    private $content;
+    private $timing;
+    private $serving;
+    private $category;
+    private $folder;
+    private $date;
+    private $id;
 
     public function __construct(array $data)
     {
@@ -51,37 +54,37 @@ class Article
 
     public function content()
     {
-        return $this->_content;
+        return $this->content;
     }
 
     public function timing()
     {
-        return $this->_timing;
+        return $this->timing;
     }
 
     public function serving()
     {
-        return $this->_serving;
+        return $this->serving;
     }
 
     public function category()
     {
-        return $this->_category;
+        return $this->category;
     }
 
     public function folder()
     {
-        return $this->_folder;
+        return $this->folder;
     }
 
     public function date()
     {
-        return $this->_date;
+        return $this->date;
     }
 
     public function id()
     {
-        return $this->_id;
+        return $this->id;
     }
 
     // Setters
@@ -95,45 +98,45 @@ class Article
     public function setContent($content)
     {
         if (is_string($content)) {
-            $this->_content = $content;
+            $this->content = $content;
         }
     }
 
     public function setTiming($timing)
     {
         if (is_string($timing)) {
-            $this->_timing = $timing;
+            $this->timing = $timing;
         }
     }
 
     public function setServing($serving)
     {
         if (is_string($serving)) {
-            $this->_serving = $serving;
+            $this->serving = $serving;
         }
     }
 
     public function setcategory($category)
     {
         if (is_string($category)) {
-            $this->_category = $category;
+            $this->category = $category;
         }
     }
 
     public function setFolder($folder)
     {
         if (is_string($folder)) {
-            $this->_folder = $folder;
+            $this->folder = $folder;
         }
     }
 
     public function setDate($date)
     {
-        $this->_date = $date;
+        $this->date = $date;
     }
 
     public function setId($id)
     {
-        $this->_id = $id;
+        $this->id = $id;
     }
 }

@@ -1,5 +1,7 @@
 <?php
 
+namespace MiamDelice\Blog\Model;
+
 class ArticleManager extends Manager
 {
     public function add(Article $article)

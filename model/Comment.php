@@ -1,11 +1,14 @@
 <?php
+
+namespace MiamDelice\Blog\Model;
+
 class Comment
 {
-    private $_login;
-    private $_comment;
-    private $_date;
-    private $_id;
-    private $_postId;
+    private $login;
+    private $comment;
+    private $date;
+    private $id;
+    private $post_id;
 
     public function __construct(array $data)
     {
@@ -34,56 +37,55 @@ class Comment
     // Getters
     public function login()
     {
-        return $this->_login;
+        return $this->login;
     }
 
     public function comment()
     {
-        return $this->_comment;
+        return $this->comment;
     }
 
     public function date()
     {
-        return $this->_date;
+        return $this->date;
     }
 
     public function id()
     {
-        return $this->_id;
+        return $this->id;
     }
 
     public function postId()
     {
-        return $this->_postId;
+        return $this->post_id;
     }
 
     // Setters
     public function setLogin($login)
     {
         if (is_string($login)) {
-            $this->_login = $login;
+            $this->login = $login;
         }
     }
 
     public function setContent($comment)
     {
         if (is_string($comment)) {
-            $this->_comment = $comment;
+            $this->comment = $comment;
         }
     }
     public function setDate($date)
     {
-        $this->_date = $date;
+        $this->date = $date;
     }
 
-    public function setId(
-      $id
-) {
-        $this->_id = $id;
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     public function setPostId($postId)
     {
-        $this->_postId = $postId;
+        $this->post_id = $postId;
     }
 }

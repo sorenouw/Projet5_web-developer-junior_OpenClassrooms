@@ -1,4 +1,7 @@
 <?php
+
+namespace MiamDelice\Blog\Model;
+
 class User
 {
     private $_login;

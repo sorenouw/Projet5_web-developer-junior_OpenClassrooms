@@ -1,4 +1,14 @@
 <?php
+
+use \MiamDelice\Blog\Model\Article;
+use \MiamDelice\Blog\Model\ArticleManager;
+use \MiamDelice\Blog\Model\Comment;
+use \MiamDelice\Blog\Model\CommentManager;
+use \MiamDelice\Blog\Model\Database;
+use \MiamDelice\Blog\Model\Manager;
+use \MiamDelice\Blog\Model\User;
+use \MiamDelice\Blog\Model\UserManager;
+
 class FrontController
 {
     public function home()
@@ -6,7 +16,7 @@ class FrontController
         $articleManager = new ArticleManager();
         $articles = $articleManager->getList();
 
-        require('view/frontend/home.php');
+        include 'view/frontend/home.php';
     }
     public function category()
     {
@@ -15,29 +25,33 @@ class FrontController
         $category;
         switch ($id) {
         case 1:
-        $category =   "Entrée";
+            $category =   "Entrée";
             break;
         case 2:
-        $category =     "Plats";
+            $category =     "Plats";
             break;
         case 3:
-      $category =    "Desserts";
+            $category =    "Desserts";
             break;
-    }
+        }
 
-        $article = new Article(array(
-        'category'=>$id,
-    ));
+        $article = new Article(
+            array(
+            'category'=>$id,
+            )
+        );
         $articles = $articleManager->getCategory($article);
 
         $commentManager = new CommentManager();
         $postId = $_GET['id'];
-        $comment = new Comment(array(
-        'postId'=>$postId,
-    ));
+        $comment = new Comment(
+            array(
+            'postId'=>$postId,
+            )
+        );
         $comments = $commentManager->getList($comment);
 
-        require('view/frontend/category.php');
+        include 'view/frontend/category.php';
     }
     public function commentView()
     {
@@ -60,39 +74,47 @@ class FrontController
                 }
                 if ($validation === true) {
                     $commentManager = new CommentManager();
-                    $comment = new Comment(array(
-          'login'=> $auteur,
-          'comment'=> $commentaire,
-          'postId'=> $postId,
-        ));
+                    $comment = new Comment(
+                        array(
+                        'login'=> $auteur,
+                        'comment'=> $commentaire,
+                        'postId'=> $postId,
+                        )
+                    );
                     $commentManager->add($comment);
                 }
             } elseif (isset($_POST['2'])) {
                 $id = $_GET['comment_id'];
                 $commentManager = new CommentManager();
-                $comment = new Comment(array(
-      'id'=> $id,
-    ));
+                $comment = new Comment(
+                    array(
+                    'id'=> $id,
+                    )
+                );
                 $commentManager->report($comment);
                 $_SESSION["flash"] = "Vous avez bien signaler le commentaire.";
             } elseif (isset($_POST['5'])) {
                 $id = $_GET['comment_id'];
                 $commentManager = new CommentManager();
-                $comment = new Comment(array(
-      'id'=> $id,
-    ));
+                $comment = new Comment(
+                    array(
+                    'id'=> $id,
+                    )
+                );
                 $commentManager->delete($comment);
             }
 
             //  récupération des Commentaires
             $commentManager = new CommentManager();
             $postId = $_GET['id'];
-            $comment = new Comment(array(
-        'postId'=>$postId,
-    ));
+            $comment = new Comment(
+                array(
+                'postId'=>$postId,
+                )
+            );
             $comments = $commentManager->getList($comment);
 
-            require('view/frontend/commentView.php');
+            include 'view/frontend/commentView.php';
         } else {
             header("location:index.php?action=404");
         }
@@ -105,10 +127,12 @@ class FrontController
             $userManager = new UserManager();
             $login = $_POST["login"];
             $password = $_POST["password"];
-            $user = new User(array(
-           'login' => $login,
-           'password' => $password,
-         ));
+            $user = new User(
+                array(
+                'login' => $login,
+                'password' => $password,
+                )
+            );
             $data = $userManager->getUser($user);
             if ($data!=false) {
                 $message = "Connexion réussie";
@@ -120,20 +144,20 @@ class FrontController
         } elseif (!empty($_POST['login']) || !empty($_POST['password'])) {
             $message = "Le nom d'utilisateur ou le mot de passe est érroné";
         }
-        require('view/frontend/login.php');
+        include 'view/frontend/login.php';
     }
 
     public function errorPage()
     {
-        require('view/frontend/errorPage.php');
+        include 'view/frontend/errorPage.php';
     }
     public function mentions()
     {
-        require('view/frontend/mentions.php');
+        include 'view/frontend/mentions.php';
     }
     public function qui()
     {
-        require('view/frontend/quisuisje.php');
+        include 'view/frontend/quisuisje.php';
     }
     public function disconnect()
     {
