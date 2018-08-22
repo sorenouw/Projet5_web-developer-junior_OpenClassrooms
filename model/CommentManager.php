@@ -71,14 +71,16 @@ class CommentManager extends Manager
         return $getReported;
     }
 
-    public function deleteAll(Comment $comment){
+    public function deleteAll(Comment $comment)
+    {
       $req= $this->getDb()->prepare("DELETE FROM comment WHERE post_id = :post_id");
       $req->execute(array(
               'post_id'=> $comment->postId(),
           ));
     }
 
-    public function checkComment($id){
+    public function checkComment($id
+  ){
       $req = $this->getDb()->prepare("SELECT * FROM comment WHERE id = :id");
       $req->execute(array(
         'id'=> $id,

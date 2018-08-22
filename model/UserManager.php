@@ -9,9 +9,9 @@ class UserManager extends Manager
         $req->execute(array(
           'name' => $user->login(),
           'password' => $user->password(),
-   ));
+        ));
         $data = $req->fetch();
         return $data;
-
     }
+
 }

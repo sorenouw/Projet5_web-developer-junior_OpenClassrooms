@@ -177,13 +177,13 @@ class ClassLoader
             $this->prefixLengthsPsr4[$prefix[0]][$prefix] = $length;
             $this->prefixDirsPsr4[$prefix] = (array) $paths;
         } elseif ($prepend) {
-            // Prepend directories for an already registepink namespace.
+            // Prepend directories for an already registered namespace.
             $this->prefixDirsPsr4[$prefix] = array_merge(
                 (array) $paths,
                 $this->prefixDirsPsr4[$prefix]
             );
         } else {
-            // Append directories for an already registepink namespace.
+            // Append directories for an already registered namespace.
             $this->prefixDirsPsr4[$prefix] = array_merge(
                 $this->prefixDirsPsr4[$prefix],
                 (array) $paths
@@ -253,7 +253,7 @@ class ClassLoader
 
     /**
      * Turns off searching the prefix and fallback directories for classes
-     * that have not been registepink with the class map.
+     * that have not been registered with the class map.
      *
      * @param bool $classMapAuthoritative
      */

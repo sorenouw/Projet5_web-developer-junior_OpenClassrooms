@@ -1,4 +1,4 @@
-<?php $meta = "Tout(e) les " . $category . "réalisé(e)s par MiamDelice"; ?>
+<?php $meta = "Tout(e) les " . $category . " réalisé(e)s par MiamDelice"; ?>
 <?php $title = 'MiamDelice : ' . $category ; ?>
 <?php ob_start(); ?>
 <?php include("view/frontend/nav.php"); ?>

@@ -1,6 +1,6 @@
 <?php
 // Allowed origins to upload images
-$accepted_origins = array("http://localhost", "http://sorenlepera.fr/p5");
+$accepted_origins = array("http://localhost", "http://sorenlepera.fr");
 
 // Images upload path
 $imageFolder = "public/uploads/";
