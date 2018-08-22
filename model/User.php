@@ -4,9 +4,9 @@ namespace MiamDelice\Blog\Model;
 
 class User
 {
-    private $_login;
-    private $_password;
-    private $_mail;
+    private $login;
+    private $password;
+    private $mail;
 
     public function __construct(array $data)
     {
@@ -29,36 +29,36 @@ class User
     // Getters
     public function login()
     {
-        return $this->_login;
+        return $this->login;
     }
 
     public function password()
     {
-        return $this->_password;
+        return $this->password;
     }
 
     public function mail()
     {
-        return $this->_mail;
+        return $this->mail;
     }
 
     // Setters
     public function setLogin($login)
     {
         if (is_string($login)) {
-            $this->_login = $login;
+            $this->login = $login;
         }
     }
 
     public function setPassword($password)
     {
         if (is_string($password)) {
-            $this->_password = $password;
+            $this->password = $password;
         }
     }
 
     public function setMail($mail)
     {
-        $this->_mail = $mail;
+        $this->mail = $mail;
     }
 }

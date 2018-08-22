@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-
-
-
 // Models
 require "model/Database.php";
 require "model/Manager.php";
@@ -17,8 +14,6 @@ require "model/UserManager.php";
 // Controllers
 require "controller/BackController.php";
 require "controller/FrontController.php";
-
-
 
   $frontController = new FrontController();
   $backController = new BackController();
