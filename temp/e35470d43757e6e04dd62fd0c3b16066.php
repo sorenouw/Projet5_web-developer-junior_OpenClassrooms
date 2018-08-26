@@ -7,11 +7,6 @@ return array (
       'file' => 'C:\\wamp\\www\\php\\p5/controller\\BackController.php',
       'time' => 1534981569,
     ),
-    'MiamDelice\\Blog\\Controller\\FrontController' => 
-    array (
-      'file' => 'C:\\wamp\\www\\php\\p5/controller\\FrontController.php',
-      'time' => 1534981573,
-    ),
     'MiamDelice\\Blog\\Model\\Article' => 
     array (
       'file' => 'C:\\wamp\\www\\php\\p5/model\\Article.php',
@@ -50,7 +45,12 @@ return array (
     'MiamDelice\\Blog\\Model\\UserManager' => 
     array (
       'file' => 'C:\\wamp\\www\\php\\p5/model\\UserManager.php',
-      'time' => 1534980289,
+      'time' => 1535300681,
+    ),
+    'MiamDelice\\Blog\\Controller\\FrontController' => 
+    array (
+      'file' => 'C:\\wamp\\www\\php\\p5/controller\\FrontController.php',
+      'time' => 1535300953,
     ),
   ),
   1 => 

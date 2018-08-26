@@ -129,20 +129,21 @@ class FrontController
             $userManager = new UserManager();
             $login = $_POST["login"];
             $password = $_POST["password"];
-            $user = new User(
-                array(
-                'login' => $login,
-                'password' => $password,
-                )
-            );
-            $data = $userManager->getUser($user);
-            if ($data!=false) {
-                $message = "Connexion réussie";
-                $_SESSION["user"] = $login;
-                header("location:index.php?action=admin");
-            } else {
-                $message = "Le nom d'utilisateur ou le mot de passe est érroné";
-            }
+              $user = new User(
+                  array(
+                  'login' => $login,
+                  )
+              );
+              $data = $userManager->getUser($user);
+              $validPassword = password_verify($password, $data[2]);
+              if ($validPassword) {
+                  $message = "Connexion réussie";
+                  $_SESSION["user"] = $login;
+                  header("location:index.php?action=admin");
+              } else {
+                  $message = "Le nom d'utilisateur ou le mot de passe est érroné";
+              }
+
         } elseif (!empty($_POST['login']) || !empty($_POST['password'])) {
             $message = "Le nom d'utilisateur ou le mot de passe est érroné";
         }
