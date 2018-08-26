@@ -38,8 +38,9 @@ class FrontController
         }
 
         $article = new Article(
-            array(
-            'category'=>$id,
+            array
+            (
+                'category'=>$id,
             )
         );
         $articles = $articleManager->getCategory($article);
@@ -47,8 +48,9 @@ class FrontController
         $commentManager = new CommentManager();
         $postId = $_GET['id'];
         $comment = new Comment(
-            array(
-            'postId'=>$postId,
+            array
+            (
+                'postId'=>$postId,
             )
         );
         $comments = $commentManager->getList($comment);
@@ -77,10 +79,11 @@ class FrontController
                 if ($validation === true) {
                     $commentManager = new CommentManager();
                     $comment = new Comment(
-                        array(
-                        'login'=> $auteur,
-                        'comment'=> $commentaire,
-                        'postId'=> $postId,
+                        array
+                        (
+                            'login'=> $auteur,
+                            'comment'=> $commentaire,
+                            'postId'=> $postId,
                         )
                     );
                     $commentManager->add($comment);
@@ -89,8 +92,9 @@ class FrontController
                 $id = $_GET['comment_id'];
                 $commentManager = new CommentManager();
                 $comment = new Comment(
-                    array(
-                    'id'=> $id,
+                    array
+                    (
+                        'id'=> $id,
                     )
                 );
                 $commentManager->report($comment);
@@ -99,8 +103,9 @@ class FrontController
                 $id = $_GET['comment_id'];
                 $commentManager = new CommentManager();
                 $comment = new Comment(
-                    array(
-                    'id'=> $id,
+                    array
+                    (
+                        'id'=> $id,
                     )
                 );
                 $commentManager->delete($comment);
@@ -110,8 +115,9 @@ class FrontController
             $commentManager = new CommentManager();
             $postId = $_GET['id'];
             $comment = new Comment(
-                array(
-                'postId'=>$postId,
+                array
+                (
+                    'postId'=>$postId,
                 )
             );
             $comments = $commentManager->getList($comment);
@@ -130,12 +136,13 @@ class FrontController
             $login = $_POST["login"];
             $password = $_POST["password"];
               $user = new User(
-                  array(
-                  'login' => $login,
+                  array
+                  (
+                      'login' => $login,
                   )
               );
               $data = $userManager->getUser($user);
-              $validPassword = password_verify($password, $data[2]);
+              $validPassword = password_verify($password, $data['password']);
               if ($validPassword) {
                   $message = "Connexion réussie";
                   $_SESSION["user"] = $login;

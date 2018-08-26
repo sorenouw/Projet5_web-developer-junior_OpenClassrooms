@@ -10,9 +10,9 @@ class CommentManager extends Manager
         $req->execute(
             array
             (
-              'login'=> $comment->login(),
-              'comment'=> $comment->comment(),
-              'post_id'=> $comment->postId(),
+                'login'=> $comment->login(),
+                'comment'=> $comment->comment(),
+                'post_id'=> $comment->postId(),
             )
         );
     }
@@ -52,8 +52,8 @@ class CommentManager extends Manager
         $req->execute(
             array
             (
-              'comment'=> $comment->comment(),
-              'id'=> $comment->id(),
+                'comment'=> $comment->comment(),
+                'id'=> $comment->id(),
             )
         );
     }

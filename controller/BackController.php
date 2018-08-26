@@ -36,16 +36,18 @@ class BackController
 
 
         $article = new Article(
-            array(
-            'id'=>$id,
+            array
+            (
+                'id'=>$id,
             )
         );
         $articleManager->delete($article);
         // delete all comments of this post
         $commentManager = new CommentManager();
         $comment = new Comment(
-            array(
-            'postId'=> $id,
+            array
+            (
+                'postId'=> $id,
             )
         );
         $commentManager->deleteAll($comment);
@@ -58,8 +60,9 @@ class BackController
         $id = $_GET['id'];
         $commentManager = new CommentManager();
         $comment = new Comment(
-            array(
-            'id'=> $id,
+            array
+            (
+                'id'=> $id,
             )
         );
         $commentManager->delete($comment);
@@ -90,13 +93,14 @@ class BackController
                 if ($validation === true) {
                     $articleManager = new ArticleManager();
                     $article = new Article(
-                        array(
-                        'title'=>$title,
-                        'content'=>$post,
-                        'timing'=> $timing,
-                        'serving'=> $serving,
-                        'category'=> $category,
-                        'id'=> $id,
+                        array
+                        (
+                            'title'=>$title,
+                            'content'=>$post,
+                            'timing'=> $timing,
+                            'serving'=> $serving,
+                            'category'=> $category,
+                            'id'=> $id,
                         )
                     );
                     $articleManager->editPost($article);
@@ -132,9 +136,10 @@ class BackController
                 if ($validation === true) {
                     $commentManager = new CommentManager();
                     $comment = new Comment(
-                        array(
-                        'comment'=>$newComment,
-                        'id'=> $id,
+                        array
+                        (
+                            'comment'=>$newComment,
+                            'id'=> $id,
                         )
                     );
                     $commentManager->editComment($comment);
@@ -168,13 +173,14 @@ class BackController
                 move_uploaded_file($_FILES["image"]["tmp_name"], "public/uploads/" . $_FILES["image"]["name"]);
                 $articleManager = new ArticleManager();
                 $article = new Article(
-                    array(
-                    'title'=> $title,
-                    'content'=> $content,
-                    'timing'=> $timing,
-                    'serving'=> $serving,
-                    'category'=> $category,
-                    'folder'=> $folderPath,
+                    array
+                    (
+                        'title'=> $title,
+                        'content'=> $content,
+                        'timing'=> $timing,
+                        'serving'=> $serving,
+                        'category'=> $category,
+                        'folder'=> $folderPath,
                     )
                 );
                 $articleManager->add($article);

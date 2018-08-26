@@ -50,7 +50,7 @@ return array (
     'MiamDelice\\Blog\\Controller\\FrontController' => 
     array (
       'file' => 'C:\\wamp\\www\\php\\p5/controller\\FrontController.php',
-      'time' => 1535300953,
+      'time' => 1535301276,
     ),
   ),
   1 => 

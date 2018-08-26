@@ -8,8 +8,9 @@ class UserManager extends Manager
     {
         $req = $this->getDb()->prepare("SELECT * FROM user WHERE name = :name");
         $req->execute(
-            array(
-            'name' => $user->login(),
+            array
+            (
+                'name' => $user->login(),
             )
         );
         $data = $req->fetch();

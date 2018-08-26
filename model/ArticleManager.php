@@ -10,12 +10,12 @@ class ArticleManager extends Manager
         $req->execute(
             array
             (
-            'title'=> $article->title(),
-            'content'=> $article->content(),
-            'timing' => $article->timing(),
-            'serving' => $article->serving(),
-            'category' => $article->category(),
-            'folder'=> $article->folder(),
+                'title'=> $article->title(),
+                'content'=> $article->content(),
+                'timing' => $article->timing(),
+                'serving' => $article->serving(),
+                'category' => $article->category(),
+                'folder'=> $article->folder(),
             )
         );
     }
@@ -37,7 +37,7 @@ class ArticleManager extends Manager
         $req->execute(
             array
             (
-            'category'=> $article->category(),
+                'category'=> $article->category(),
             )
         );
         while ($data = $req->fetch()) {
@@ -52,8 +52,8 @@ class ArticleManager extends Manager
         $req->execute(
             array
             (
-              'id'=> $id,
-              )
+                'id'=> $id,
+            )
         );
         $getPost = new Article($req->fetch());
         return  $getPost;
@@ -81,7 +81,7 @@ class ArticleManager extends Manager
         $req->execute(
             array
             (
-              'id'=> $article->id(),
+                'id'=> $article->id(),
             )
         );
     }
@@ -92,7 +92,7 @@ class ArticleManager extends Manager
         $req->execute(
             array
             (
-              'id'=> $id,
+                'id'=> $id,
             )
         );
         $getPost = $req->fetch();
